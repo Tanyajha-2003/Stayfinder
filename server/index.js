@@ -14,7 +14,7 @@ const authRoutes = require('./routes/Auth');
 const listingsRoutes = require('./routes/listings');
 const bookingsRoutes = require('./routes/bookings');
 
-app.use('/api/auth', authRoutes);
+app.use('/api/Auth', authRoutes);
 app.use('/api/listings', listingsRoutes);
 app.use('/api/bookings', bookingsRoutes);
 
