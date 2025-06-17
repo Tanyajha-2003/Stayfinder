@@ -1,0 +1,46 @@
+/* src/pages/Home.css */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../../public/bg-image.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .hero-section {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 600px;
+  }
+  
+  .hero-section h1 {
+    font-size: 42px;
+    margin-bottom: 16px;
+  }
+  
+  .hero-section p {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  
+  .home-button {
+    background-color: #ff9800;
+    padding: 12px 24px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #e68900;
+  }
+  

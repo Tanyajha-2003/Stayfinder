@@ -1,0 +1,72 @@
+   .payment-page {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    background: linear-gradient(145deg, #f5f9ff, #ffffff);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+  }
+  
+  .payment-page:hover {
+    transform: scale(1.01);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  }
+  
+  .payment-page h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #2a2e5c;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+  }
+  
+  .payment-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .payment-page input,
+  .StripeElement {
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fdfdff;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .payment-page input:focus,
+  .StripeElement--focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  
+  .payment-page button {
+    padding: 14px;
+    font-size: 16px;
+    background: linear-gradient(135deg, #3a7bd5, #3a6073);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .payment-page button:hover {
+    background: linear-gradient(135deg, #325d9f, #2e4e6f);
+  }
+  
+  .payment-page .confirmation-message {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    color: #2b7a4b;
+    background: #e8f5ec;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #b5dec9;
+  }
+  

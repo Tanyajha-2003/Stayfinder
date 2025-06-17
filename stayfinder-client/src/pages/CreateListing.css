@@ -1,0 +1,75 @@
+/* src/pages/CreateListing.css */
+.create-listing-page {
+  max-width: 700px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.create-listing-page h2 {
+  text-align: center;
+  color: #222;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.listing-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.listing-form input,
+.listing-form textarea {
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.listing-form input:focus,
+.listing-form textarea:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 6px rgba(26, 115, 232, 0.2);
+  outline: none;
+}
+
+.listing-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.listing-form label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: -10px;
+}
+
+.listing-form button {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(135deg, #3a7bd5, #3a6073);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.listing-form button:hover {
+  background: linear-gradient(135deg, #325d9f, #2e4e6f);
+  transform: translateY(-1px);
+}
+
+.form-message {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #444;
+}

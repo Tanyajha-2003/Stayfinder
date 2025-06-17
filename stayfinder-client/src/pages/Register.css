@@ -1,0 +1,72 @@
+   .register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+  }
+  .main{
+    min-height: 100vh;
+  }
+  .register-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1; 
+  }
+  
+  .register-form input,
+  .register-form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .register-form button {
+    background: linear-gradient(135deg, #3a7bd5, #3a6073);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .register-form button:hover {
+    background: linear-gradient(135deg, #325d9f, #2e4e6f);
+  }
+  
+  .register-error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .register-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    margin-top: auto; 
+  }
+  
+  .register-footer a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  .register-footer a:hover {
+    text-decoration: underline;
+  }
+  
