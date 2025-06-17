@@ -59,8 +59,7 @@ const ListingDetail = () => {
     e.preventDefault();
     const token = localStorage.getItem('token');
     if (!token) {
-      alert('Please login to confirm your booking.');
-      window.location.href = '/login';
+      navigate('/login');
       return;
     }
 
