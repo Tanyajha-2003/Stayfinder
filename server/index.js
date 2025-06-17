@@ -10,11 +10,11 @@ app.use(cors());
 app.use(express.json());
 
 // 🔗 ROUTES
-const authRoutes = require('./routes/Auth');
+const authRoutes = require('./routes/auth');
 const listingsRoutes = require('./routes/listings');
 const bookingsRoutes = require('./routes/bookings');
 
-app.use('/api/Auth', authRoutes);
+app.use('/api/auth', authRoutes);
 app.use('/api/listings', listingsRoutes);
 app.use('/api/bookings', bookingsRoutes);
 
