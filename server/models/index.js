@@ -4,7 +4,16 @@ require('dotenv').config();
 const sequelize = new Sequelize(process.env.DB_URL, {
   dialect: 'postgres',
   logging: false, 
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    }
+  }
 });
+sequelize.authenticate()
+  .then(() => console.log('✅ Connected to DB'))
+  .catch((err) => console.error('❌ DB connection error:', err));
 
 const UserModel = require('./user');
 const ListingModel = require('./listing'); 
