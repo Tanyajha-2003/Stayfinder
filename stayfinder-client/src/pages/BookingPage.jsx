@@ -20,9 +20,10 @@ const BookingPage = () => {
     fetchListing();
   }, [id]);
   const token = localStorage.getItem('token');
+  const navigate = useNavigate();
   if (!token) {
     alert('Please login to confirm your booking.');
-    window.location.href = '/login';  
+    navigate('/login'); 
     return;
   }
   const handleBooking = () => {

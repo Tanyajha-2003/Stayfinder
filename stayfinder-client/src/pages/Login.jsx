@@ -59,7 +59,7 @@ const Login = () => {
                 {errorMessage && <p className="login-error">{errorMessage}</p>}
 
                 <div className="login-links">
-                    <p>Don't have an account? <a href="/register">Sign up here</a></p>
+                    <p>Don't have an account? <Link to="/register">Sign up here</Link></p>
                     <p><a href="/forgot-password">Forgot password?</a></p>
                 </div>
             </div>
