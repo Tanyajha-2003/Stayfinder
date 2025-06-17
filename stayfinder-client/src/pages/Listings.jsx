@@ -26,7 +26,7 @@ const Listings = () => {
   useEffect(() => {
     const fetchListings = async () => {
       try {
-        const response = await axios.get('http://localhost:5001/api/listings');
+        const response = await axios.get('https://stayfinder-backend-2qaa.onrender.com/api/listings');
         setListings(response.data);
       } catch (err) {
         console.error('Error fetching listings:', err);

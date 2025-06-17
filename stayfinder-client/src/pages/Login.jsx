@@ -14,7 +14,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5001/api/auth/login', { email, password });
+            const response = await axios.post('https://stayfinder-backend-2qaa.onrender.com/api/auth/login', { email, password });
             if (response.data && response.data.token) {
                 localStorage.setItem('token', response.data.token);
                 alert('Login successful!');

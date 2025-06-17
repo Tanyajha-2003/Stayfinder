@@ -8,7 +8,7 @@ const CheckoutForm = ({ amount }) => {
   const [clientSecret, setClientSecret] = useState('');
 
   useEffect(() => {
-    axios.post('http://localhost:5001/api/create-payment-intent', { amount })
+    axios.post('https://stayfinder-backend-2qaa.onrender.com/api/create-payment-intent', { amount })
       .then(res => setClientSecret(res.data.clientSecret))
       .catch(console.error);
   }, [amount]);

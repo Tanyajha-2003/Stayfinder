@@ -23,7 +23,7 @@ const ListingDetail = () => {
   useEffect(() => {
     const fetchListing = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/api/listings/${id}`);
+        const response = await axios.get(`https://stayfinder-backend-2qaa.onrender.com/api/listings/${id}`);
         const data = response.data;
         setListing(data);
         console.log("Full Address:", data.full_address);

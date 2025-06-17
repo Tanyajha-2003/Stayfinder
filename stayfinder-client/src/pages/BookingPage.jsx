@@ -11,7 +11,7 @@ const BookingPage = () => {
   useEffect(() => {
     const fetchListing = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/api/listings/${id}`);
+        const response = await axios.get(`https://stayfinder-backend-2qaa.onrender.com/api/listings/${id}`);
         setListing(response.data);
       } catch (error) {
         console.error('Error fetching listing:', error);

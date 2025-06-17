@@ -26,7 +26,7 @@ const CreateListing = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post('http://localhost:5001/api/listings', formData, {
+      const res = await axios.post('https://stayfinder-backend-2qaa.onrender.com/api/listings', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

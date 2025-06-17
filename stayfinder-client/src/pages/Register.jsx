@@ -14,7 +14,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5001/api/auth/register', {
+      const response = await axios.post('https://stayfinder-backend-2qaa.onrender.com/api/auth/register', {
         email,
         password,
         role,
