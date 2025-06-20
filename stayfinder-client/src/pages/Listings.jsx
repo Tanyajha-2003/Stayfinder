@@ -109,8 +109,10 @@ const Listings = () => {
       </form>
 
       {/* Listings */}
-     {loading ? (
+    {loading ? (
   <p className="loading-message">Loading listings...</p>
+) : listings.length === 0 ? (
+  <p className="no-listings">No listings available</p>
 ) : filteredListings.length === 0 ? (
   <p className="no-listings">No listings match your filters</p>
 ) : (
