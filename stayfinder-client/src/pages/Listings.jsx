@@ -11,6 +11,7 @@ import { enUS } from 'date-fns/locale';
 
 const Listings = () => {
   const [searchLocation, setSearchLocation] = useState('');
+  const [loading, setLoading] = useState(true);
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [listings, setListings] = useState([]);
@@ -26,11 +27,14 @@ const Listings = () => {
   useEffect(() => {
     const fetchListings = async () => {
       try {
+        setLoading(true);
         const response = await axios.get('https://stayfinder-backend-2qaa.onrender.com/api/listings');
         setListings(response.data);
       } catch (err) {
         console.error('Error fetching listings:', err);
-      }
+      }finally {
+      setLoading(false); 
+    }
     };
 
     fetchListings();
@@ -105,26 +109,29 @@ const Listings = () => {
       </form>
 
       {/* Listings */}
-      {filteredListings.length === 0 ? (
-        <p className="no-listings">No listings match your filters</p>
-      ) : (
-        <div className="listings-grid">
-          {filteredListings.map((listing) => (
-            <Link to={`/listing/${listing.id}`} className="listing-card-link" key={listing.id}>
-              <div className="listing-card">
-                <img src={listing.imageUrl} alt={listing.title} className="listing-image" />
-                <div className="listing-info">
-                  <h3>{listing.title}</h3>
-                  <p className="listing-description">{listing.description}</p>
-                  <p className="listing-price">₹{listing.price} per night</p>
-                  <p className="listing-location">{listing.location}</p>
-                  <button className="listing-button">View Details</button>
-                </div>
-              </div>
-            </Link>
-          ))}
+     {loading ? (
+  <p className="loading-message">Loading listings...</p>
+) : filteredListings.length === 0 ? (
+  <p className="no-listings">No listings match your filters</p>
+) : (
+  <div className="listings-grid">
+    {filteredListings.map((listing) => (
+      <Link to={`/listing/${listing.id}`} className="listing-card-link" key={listing.id}>
+        <div className="listing-card">
+          <img src={listing.imageUrl} alt={listing.title} className="listing-image" />
+          <div className="listing-info">
+            <h3>{listing.title}</h3>
+            <p className="listing-description">{listing.description}</p>
+            <p className="listing-price">₹{listing.price} per night</p>
+            <p className="listing-location">{listing.location}</p>
+            <button className="listing-button">View Details</button>
+          </div>
         </div>
-      )}
+      </Link>
+    ))}
+  </div>
+)}
+
     </div>
   );
 };
