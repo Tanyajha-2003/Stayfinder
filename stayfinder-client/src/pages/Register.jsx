@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link} from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
@@ -62,7 +62,7 @@ const Register = () => {
       {error && <p className="register-error">{error}</p>}
 
       <p className="register-footer">
-        Already have an account? <a href="/login">Login</a>
+        Already have an account? <Link to="/login">Login</Link>
       </p>
     </div>
   );
