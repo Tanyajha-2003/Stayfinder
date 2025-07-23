@@ -2,6 +2,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 require('dotenv').config();
 const fs = require('fs');
 const dns = require('dns');
+const path = require('path');
 dns.setDefaultResultOrder('ipv4first');
 const certificatePath = path.resolve(__dirname, '../db_certificate.crt');
 const certificate = fs.readFileSync(certificatePath);
