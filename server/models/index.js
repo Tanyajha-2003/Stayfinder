@@ -1,7 +1,10 @@
 const { Sequelize, DataTypes } = require('sequelize');
 require('dotenv').config();
+const fs = require('fs');
 const dns = require('dns');
 dns.setDefaultResultOrder('ipv4first');
+const certificatePath = path.resolve(__dirname, '../db_certificate.crt');
+const certificate = fs.readFileSync(certificatePath);
 const sequelize = new Sequelize(process.env.DB_URL, {
   dialect: 'postgres',
   logging: false, 
@@ -9,6 +12,7 @@ const sequelize = new Sequelize(process.env.DB_URL, {
     ssl: {
       require: true,
       rejectUnauthorized: false,
+       ca: certificate,
     }
   }
 });
