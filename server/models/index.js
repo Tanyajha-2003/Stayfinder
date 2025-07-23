@@ -1,6 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
 require('dotenv').config();
-
+const dns = require('dns');
+dns.setDefaultResultOrder('ipv4first');
 const sequelize = new Sequelize(process.env.DB_URL, {
   dialect: 'postgres',
   logging: false, 
@@ -33,6 +34,9 @@ const db = {
 // Initialize associations if they exist
 User.associate && User.associate(db);
 Listing.associate && Listing.associate(db);
+sequelize.sync()
+  .then(() => console.log('✅ All models synchronized'))
+  .catch((err) => console.error('❌ Sync error:', err));
 
 // Export the db object to make all models available throughout the application
 module.exports = db;
